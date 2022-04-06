@@ -2,15 +2,23 @@ for f in "$@"; do
     cd "$f"
     mkdir -p "JPG" "RAW"
     mv *.JPG "./JPG"
-    mv *jpg "./JPG"
+    mv *.jpg "./JPG"
+    mv *.JPEG "./JPG"
+    mv *.jpeg "./JPG"
     mv *.CR2 "./RAW"
-    mv *cr2 "./RAW"
+    mv *.cr2 "./RAW"
+    mv *.NEF "./RAW"
+    mv *.nef "./RAW"
+    mv *.ARW "./RAW"
+    mv *.arw "./RAW"
+    mv *.RW2 "./RAW"
+    mv *.rw2 "./RAW"
 done
 
 
-#for f in - Loop command: against a set of files - conditionally perform a command against each item.
-#"$@"; - allows you to pass down the arguments of a script or function to another command (what parameters were passed) - https://coderwall.com/p/85jnpq/bash-built-in-variables
-#-- I think it's saying for each item, pass down the arguments to the current directory which is making new folders and moving items into them --
-#do - what the action is.
-#cd "$f" - change directory to current directory (quick action is applied to the folder you are choosing in Finder).
+## for f in - Loop command: against a set of files - conditionally perform a command against each item.
+## "$@"; - allows you to pass down the arguments of a script or function to another command (what parameters were passed) - https://coderwall.com/p/85jnpq/bash-built-in-variables
+## -- I think it's saying for each item, pass down the arguments to the current directory which is making new folders and moving items into them --
+## do - what the action is.
+## cd "$f" - change directory to current directory (quick action is applied to the folder you are choosing in Finder).
 #mkdir - mkdir is make directory (folders).
